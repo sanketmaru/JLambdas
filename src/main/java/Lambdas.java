@@ -121,4 +121,8 @@ public class Lambdas {
 
 interface Greeter{
 	String createGreeting(String whom);
+	
+	default String greet(){
+		return "Hello Greeting";		
+	}
 }
