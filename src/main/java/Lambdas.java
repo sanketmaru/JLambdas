@@ -3,6 +3,7 @@ package main.java;
 import java.util.Arrays;
 import java.util.function.BiConsumer;
 import java.util.function.BiFunction;
+import java.util.function.BiPredicate;
 import java.util.function.BinaryOperator;
 import java.util.function.Consumer;
 import java.util.function.Function;
@@ -72,6 +73,11 @@ public class Lambdas {
 		Predicate<Integer> predicate1 = s -> s != null && s > 0;
 		boolean integerTest = predicate1.test(2);
 		System.out.println("Integer Test " + integerTest);
+		
+		// implementing a bipredicate
+		BiPredicate<String, String> biPredicate = (s,s1) -> s != null && s1 != null; 
+		boolean test2 = biPredicate.test("Hello", "");
+		System.out.println(test2);
 		
 		//lambdas with Primitive arguments
 		
